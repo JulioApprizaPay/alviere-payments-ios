@@ -2,14 +2,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "Payments",
+    name: "PaymentsApprizaPay",
     defaultLocalization: "en",
     platforms: [
         .iOS(.v11)
     ],
     products: [
         .library(
-            name: "Payments",
+            name: "PaymentsApprizaPay",
             type: .static,
             targets: ["PaymentsSDKDeps"]
         )
@@ -30,16 +30,16 @@ let package = Package(
         .target(
             name: "PaymentsSDKDeps",
             dependencies: [
-                "Payments",
+                "PaymentsApprizaPay",
                 "AlCore",
                 "AlCamera"
             ],
             path: "PaymentsSDKDeps"
         ),
         .binaryTarget(
-            name: "Payments",
-            url: "https://github.com/Alviere/alviere-payments-ios/releases/download/0.9.20/Payments.xcframework.zip",
-            checksum: "5fa7f160ac169f39aa969a83e2c73ad002e169d473c1fc36e08f33e398b883f4"
+            name: "PaymentsApprizaPay",
+            url: "https://github.com/JulioApprizaPay/alviere-payments-ios/releases/download/0.9.20/Payments.xcframework.zip",
+            checksum: "4a503df0396bb4394ebcc782b0d4601a21ebb7bf01fe41011b48e4a38dce7af3"
         )
     ]
 )
